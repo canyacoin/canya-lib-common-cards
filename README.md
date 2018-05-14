@@ -10,8 +10,7 @@ As the .js & .css files are hosted at canya.io, simply add these codes to your w
 ```
 To avoid any clashes, please put it at the very end of your <head> section.
   
-To call the function, put this <div> inside <body>   :
-  
+To call the function, put this code inside the part of your .html file:
 ```
   <div class ="canAppDiv">
     <div id="canyaCard"></div>
