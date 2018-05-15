@@ -1,6 +1,6 @@
 html{
     font-family: 'Montserrat', sans-serif;
-}
+} 
 .canAppCard{ 
     transition: 0.3s;
     width: 350px;
@@ -12,16 +12,39 @@ html{
     text-decoration: none;
     background-color: #ffffff;
     color: white;
+}
+.cardBtn {
+    display:inline-block;
+    padding: 12px 12px;
+    margin:10px;
+    background-color: #33ccff; 
+    border-radius: 5px;
+    width: auto; 
+    text-decoration: none;
+    color:white;
 }  
+.cardBtn:hover{ 
+    transition: 0.5s;
+    box-shadow: 0 0px 15px 0 rgba(51,204,255,0.5);
+    color:white;
+    text-decoration: none !important ;
+} 
+.cardBtn:active{   
+    background-color: rgba(0, 120, 191, 1); 
+    box-shadow: 0 0px 15px 0 rgba(0,120,191, 1);
+    color:white; 
+    text-decoration: none !important ;
+}
 .canAppCard p{ 
     color: #535353;  
 }
 .canAppCard a{ 
-    color: white;  
+    color: white !important;
+    text-decoration: none !important;
 }
 .canAppCard a:hover{ 
-    color: white;  
-    text-decoration: none;
+    color: white !important;
+    text-decoration: none !important;
 }
 .canAppDiv{ 
     background-color:#F8F9FA;
@@ -49,23 +72,10 @@ html{
     transition: 1s;
     box-shadow: 0 0px 15px 0 rgba(0,0,0,0.1);
 }
-
-.cardBtn {
-    display:inline-block;
-    padding: 12px 12px;
-    margin:10px;
-    background-color: #33ccff; 
-    border-radius: 5px;
-    width: auto;
-} 
-
-.cardBtn:hover{ 
-    transition: 0.5s;
-    box-shadow: 0 0px 15px 0 rgba(51,204,255,0.5);
+.noDecor{
+    text-decoration: none
 }
 
-
-.cardBtn:active{   
-    background-color: rgba(0, 120, 191, 1); 
-    box-shadow: 5px solid rgba(0,120,191, 1);
+.noDecor:hover{
+    text-decoration: none
 }
