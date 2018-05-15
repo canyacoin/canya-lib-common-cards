@@ -1,4 +1,4 @@
-//the array containing ALL CanApps. will be updated periodically. 
+// the array containing ALL CanApps. will be updated periodically.  
 var canApps = [
     {
         name            :   'CanInvoice',
@@ -50,12 +50,10 @@ function createCardsRandomly(maxCards, thisApp){
 		var min = 0;
 		var max = canApps.length-1;
 		//create random number 
-        var createdCards = 0;
-        
-        while(createdCards < maxCards){
-            
-            var randNumber  = Math.floor(Math.random() * (max - min + 1)) + min; 
-            if(thisApp != canApps[randNumber].name){  
+        var createdCards = 0; 
+        while(createdCards < maxCards){ //loop through the logic until we created the target number of cards.
+            var randNumber  = Math.floor(Math.random() * (max - min + 1)) + min; // Random number generator
+            if(thisApp != canApps[randNumber].name){  // if the c
                 console.log("randomNumber= "+randNumber);
                 console.log((prevIndexes.includes(randNumber)));
                 if((prevIndexes.includes(randNumber))==true){ 
@@ -68,9 +66,7 @@ function createCardsRandomly(maxCards, thisApp){
                             prevIndexes.push(randNumber);
                 }
             } 
-        }
-        
-        
+        } 
         prevIndexes.push(randNumber);
     } 
 //Creates ALL the cards, excluding the current app's card. thisApp blank if you want to show EVERYTHING.
@@ -82,15 +78,14 @@ function createCards(thisApp){
         if(thisApp != canApps[i].name){
             createCard(canApps[i]); 
         }  
-    }
-    
+    } 
  } 
  
 //the actual card factory.
 function createCard(canApp){ 
 	/* create the card container
 			since we want the whole card to be clickable, the structure of the card is as follows:
-				<a href="card-url">
+				<a href="card-url" class="noDecor">
 					<div class="canAppCard">
 						<img class="cardIllustration" href="card-illustration-url">
 						<br>
@@ -105,19 +100,27 @@ function createCard(canApp){
      card.href = canApp.url;
      card.target = "_blank";
      card.id= canApp.name;  
+    
      var cardDiv = document.createElement('div');
-     card.className = "canAppCard"; 
+     card.className = "canAppCard noDecor"; 
+     
      var cardIllustration = document.createElement('img'); 
      cardIllustration.src = canApp.illustration;
      cardIllustration.className = "cardIllustration";  
+     
      var cardLogo = document.createElement('img'); 
      cardLogo.src = canApp.logo;
      cardLogo.className = "cardLogo"; 
+     
      var cardText = document.createElement('p');
-     cardText.innerHTML = canApp.desc; 
+     cardText.innerHTML = canApp.desc;  
+     cardText.className = "noDecor";
+     
      var cardButton = document.createElement('a');
-     cardButton.className = "cardBtn";
+     cardButton.className = "cardBtn noDecor";
      cardButton.innerHTML = "Check It Out!";  
+    
+    
      cardDiv.appendChild(cardIllustration);
      cardDiv.appendChild(document.createElement('br'));
      cardDiv.appendChild(cardLogo);
