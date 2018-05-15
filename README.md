@@ -8,7 +8,9 @@ As the .js & .css files are hosted at canya.io, simply add these codes to your w
   <script src="https://canya.io/assets/cancards.js"></script>
   <link rel="stylesheet" href="https://canya.io/assets/cancards.css">
 ```
-To avoid any clashes, please put it at the very end of your <head> section.
+To avoid any clashes, please put it at the very end of your head section.
+
+Or you can download the .JS and .CSS files and put it inside your project's folder - however this is heavily discouraged.
   
 To call the function, put this code inside the part of your .html file:
 ```
