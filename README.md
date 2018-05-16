@@ -30,7 +30,11 @@ Put this code inside the the component's .html page:
       <div id="canyaCard"></div> 
   </div>
 ```
-And call the function inside the component's  .ts file:
+Add this line at the top of the component's .ts file...
+```
+declare var createCards: any;
+```
+...And call the function inside the component's  .ts file:
 ``` 
   ngOnInit() {
        createCards();
