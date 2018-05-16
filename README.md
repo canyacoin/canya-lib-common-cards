@@ -4,10 +4,10 @@ The code for generating CanApp Cards
 ## Functions 
 
 There are 2 functions you can call; 
-
 ```
-   createCards("thisApp"); //where thisApp is the name of the current CanApp. You can leave it blank.
-   createCardsRandomly(1, "thisApp"); //where thisApp is the name of the current CanApp. You can leave it blank.
+   //where thisApp is the name of the current CanApp. You can leave it blank.
+   createCards("thisApp"); 
+   createCardsRandomly(1, "thisApp"); 
 ```
 
 createCards() will generate ALL CanApp Cards. However, giving a string value, e.g. createCards("CanStation") will generate all CanApp Cards without the provided CanApp name. Do note that this is Currently case-sensitive.
