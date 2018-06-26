@@ -21,8 +21,11 @@ the code works by looking for a div called canyaCard, creating the cards, and ap
  
 As the .js & .css files are hosted at canya.io, simply add these codes to your index.html file :
 ```
+  <!-- Put this at the top of the file -->
+  <link rel="stylesheet" href="https://canya.io/assets/cancards.css"> 
+  
+  <!-- Put this at the bottom of the file -->
   <script src="https://canya.io/assets/cancards.js"></script>
-  <link rel="stylesheet" href="https://canya.io/assets/cancards.css">
 ``` 
 Put this code inside the the component's .html page:
 ```
