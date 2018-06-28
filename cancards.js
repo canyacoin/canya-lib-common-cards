@@ -3,42 +3,50 @@ var canAppArray = [
     {
         name            :   'CanInvoice',  
         desc            :   'Easily create your own clean, professional and accurate invoices',
-        url             :   'https://caninvoice.io'
+        url             :   'https://caninvoice.io',
+        type            :   'helper'
     },
     {
         name            :   'CanStation', 
         desc            :   'Find out the ideal amount of gas to allocate to your ETH transaction',
-        url             :   'https://CanStation.io'
+        url             :   'https://CanStation.io',
+        type            :   'helper'
     },
     {
         name            :   'CanFund', 
         desc            :   'Shoot your pitch, vote, contribute and raise funds',
-        url             :   'https://CanFund.io'
+        url             :   'https://CanFund.io',
+        type            :   'main'
     },
     {
         name            :   'CanSend', 
         desc            :   'Send ERC20 tokens to multiple addresses at once',
-        url             :   'https://CanSend.io'
+        url             :   'https://CanSend.io',
+        type            :   'helper'
     },
     {
         name            :   'CanShare', 
         desc            :   'Send and receive files using distributed technology',
-        url             :   'https://canshare.io/'
+        url             :   'https://canshare.io/',
+        type            :   'helper'
     },
     {
         name            :   'CanTrack', 
         desc            :   'A crisp and easy to use task tracker to help you with your project',
-        url             :   'https://CanTrack.io'
+        url             :   'https://CanTrack.io',
+        type            :   'helper'
     },
     {
         name            :   'CanSign', 
         desc            :   'Upload documents to IPFS and sign them with your Ethereum address.',
-        url             :   'https://CanSign.io'
+        url             :   'https://CanSign.io',
+        type            :   'helper'
     },
     {
         name            :   'CanSeek', 
         desc            :   'Hire and be hired with decentralised technology',
-        url             :   'https://CanSeek.io'
+        url             :   'https://CanSeek.io',
+        type            :   'main'
     }
 ];  
 //Creates the cards in a random order, excluding the current app's card.
@@ -64,9 +72,7 @@ function createCardsRandomly(maxCards, thisApp){
         prevIndexes.push(randNumber);
     }  
 //Creates 6  cards, excluding the current app's card. thisApp blank if you want to show EVERYTHING. 
-function createCards(thisApp){    
-    //console.log(getJSON('http://canya.io/assets/cancards.json')); 
-    //createCard("canInvoice"); 
+function createCards(thisApp){ 
     var shuffled = shuffle(canAppArray);
     console.log(typeof canAppArray); 
     for (var i = 0 ; i<6 ; i++){  
@@ -92,6 +98,14 @@ function shuffle(array) {
   } 
   return array;
 } 
+//this is a function that will only create helper-app cards.
+function createHelperCards(thisApp){ 
+    for (var i = 0 ; i<=6 ; i++){  
+        if(canAppArray[i].type == 'helper'){
+            createCard(canAppArray[i]); 
+        }  
+    } 
+ } 
 //the actual card factory.
 function createCard(canApp){ 
 	/* create the card container
@@ -141,5 +155,3 @@ function createCard(canApp){
      card.appendChild(cardDiv);
      document.getElementById('canyaCard').appendChild(card);
 } 
-
- 
