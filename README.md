@@ -10,7 +10,7 @@ There are 2 functions you can call;
    createCardsRandomly(1, "thisApp"); 
 ```
 
-createCards() will generate ALL CanApp Cards. However, giving a string value, e.g. createCards("CanStation") will generate all CanApp Cards without the provided CanApp name. Do note that this is Currently case-sensitive.
+createCards() will generate 6 CanApp Cards. However, giving a string value, e.g. createCards("CanStation") will generate all CanApp Cards without the provided CanApp name. Do note that this is Currently case-sensitive.
 
 createCardsRandomly() accepts 2 parameters ; numbers and app name, e.g. createCardsRandomly(4,"CanShare"). This function will generate create four random CanApp cards, except for the provided CanApp's name. It can be left blank. 
 
